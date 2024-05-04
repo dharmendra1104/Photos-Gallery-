@@ -1,0 +1,20 @@
+
+.img-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .img-card{
+    width: 30%;
+    background-color: aliceblue;
+    border: 1px solid gray ;
+    padding: 5px;
+  }
+  
+  .img-container img{
+    width: 100%;
+    background-size: cover;
+  }

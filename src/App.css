@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.buttons{
+  margin: 20px;
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: center;
+}
+.buttons ul{
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  
+}
+.buttons ul li{
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 5px;
+  transform: .3ms;
+}
+
+.buttons ul li:hover{
+  background-color: skyblue;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5ms;
+}
