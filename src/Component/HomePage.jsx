@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 
-function Images(props) {
+function HomePage(props) {
     const [data, setData] = useState([])
     const [size,setSize] = useState('')
 
@@ -23,19 +23,18 @@ function Images(props) {
     function ToggleImage(){
         setSize(size==='30%'? '100%': '30%')
     }
-  
-    return (
-      <>
-        {/* <h1>Album Gallry</h1> */}
-        <div className="img-container">
-          {data.map((item) =>
-            <div className="img-card">
-              <img onClick={ToggleImage} style={{width:size}} key={item.id} src={item.src.original} alt={item.photographer} />
-            </div>
-          )}
+  return (
+    <>
+    {/* <h1>Album Gallry</h1> */}
+    <div className="img-container">
+      {data.map((item) =>
+        <div className="img-card">
+          <img onClick={ToggleImage} style={{width:size}} key={item.id} src={item.src.original} alt={item.photographer} />
         </div>
-      </>
-    )
-  }
+      )}
+    </div>
+  </>
+  )
+}
 
-export default Images
+export default HomePage

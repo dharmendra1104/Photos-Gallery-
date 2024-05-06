@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
 import './Navbar.css'
+import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+import HomePage from './HomePage';
 
 function Navbar(props) {
-    const[value,setValue]=useState('')
+    const [value, setValue] = useState('')
 
-    function handleChange(e){
+    function handleChange(e) {
         const newValue = e.target.value;
         setValue(newValue);
-        props.setSearchValue(newValue); 
-        console.log(e.target.value) 
+        props.setSearchValue(newValue);
+        console.log(e.target.value)
     }
 
     return (
@@ -19,7 +21,12 @@ function Navbar(props) {
             <div className="menubar">
                 <input type="text" value={value} placeholder='Search' onChange={handleChange} />
                 <ul className='menu'>
-                    <li>Home</li>
+                    {/* <Router>
+                        <Routes>
+                            <Route path='/' element={<HomePage />} />
+                        </Routes>
+                    </Router>
+                    <li><Link to="/">Home</Link></li> */}
                     <li>About</li>
                     <li>Service</li>
                 </ul>

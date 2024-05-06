@@ -1,6 +1,6 @@
 import './App.css'
-import Images from './Component/Images'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import HomePage from './Component/HomePage'
 import Page1 from './Component/multiImage/Page1'
 import Page2 from './Component/multiImage/Page2'
 import Page3 from './Component/multiImage/Page3'
@@ -14,6 +14,7 @@ function App() {
   return (
     <>
       <Navbar setSearchValue={setSearchValue}/>
+      {/* <Images/ */}
       {/* /<Images/> */}
       {/* <Page1/>
       <div className="buttons">
@@ -26,7 +27,7 @@ function App() {
       </div> } */}
       <Router>
         <Routes>
-          <Route path='/' element={<Images contentvalue={searchValue}/>}/>
+          <Route path='/' element={<HomePage contentvalue={searchValue}/>}/>
           <Route path='/page1' element={<Page1/>}/>
           <Route path='/page2' element={<Page2/>}/>
           <Route path='/page3' element={<Page3/>}/>
